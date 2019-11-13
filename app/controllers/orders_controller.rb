@@ -48,8 +48,8 @@ class OrdersController < ApplicationController
       order.line_items.new(
         product: product,
         quantity: quantity,
-        item_price: product.price,
-        total_price: product.price * quantity
+        monetize: item_price: product.price,
+        monetize: total_price: product.price * quantity
       )
     end
     order.save!

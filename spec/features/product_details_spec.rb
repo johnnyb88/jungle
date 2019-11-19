@@ -23,7 +23,7 @@ RSpec.feature "Visitor navigates to product detail page", type: :feature, js: tr
 
     id = Product.find_by(id: 2).name
     # DEBUG
-    save_screenshot
+    # save_screenshot
 
     # VERIFY
     expect(page).to have_css 'section.products-show'

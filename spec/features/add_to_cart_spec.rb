@@ -21,11 +21,11 @@ RSpec.feature "user can click add to cart button for a product on home page", ty
     # ACTION
     visit root_path
     my_button = page.all('form .fa.fa-shopping-cart').first
-    # id = Product.find_by(id: 2).name
+    
     my_button.click
 
     # DEBUG / VERIFY
-    # expect(page).to have_css 'section.products-show'
+    
     expect(page).to have_content 'My Cart (1)'
     puts page.html
     save_screenshot
